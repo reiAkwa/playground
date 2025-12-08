@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
+
+  int n = 0;
+  cin >> n;
+
+  string str = to_string(n);
+  cout << str.size();
+}

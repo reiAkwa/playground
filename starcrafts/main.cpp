@@ -1,17 +1,8 @@
 #include <bits/stdc++.h>
 
-struct A {
-  A() { std::cout << "a"; }
-  void foo();
-};
-
 int main() {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
 
-  A a;
-  a.foo(); // 链接错误
-
-  
   return 0;
 }
