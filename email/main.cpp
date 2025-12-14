@@ -21,13 +21,5 @@ int main() {
     }
   }
 
-  std::vector<int> prefix(buf.size() + 1, 0);
-  for (std::size_t i = 1; i < buf.size(); ++i) {
-    prefix[i] += prefix[i - 1];
-    prefix[i] += (isValidPrefix(buf[i]) ? 1 : 0);
-  }
-
-  std::vector<int> ats;
-
   return 0;
 }
