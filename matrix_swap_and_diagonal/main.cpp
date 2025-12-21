@@ -11,8 +11,8 @@ int main() {
   int y = 0;
   std::cin >> x >> y;
 
-  for (int i = 0; i < x; ++i) {
-    for (int j = 0; j < y; ++j) {
+  for (int i = 1; i <= x; ++i) {
+    for (int j = 1; j <= y; ++j) {
       std::cin >> matrix[i][j];
     }
   }
@@ -21,12 +21,13 @@ int main() {
   int b = 0;
   int c = 0;
   int d = 0;
+  std::cin >> a >> b >> c >> d;
 
   // swap
   int max = 0;
   int min = INT_MAX;
-  for (int i = a; i < c; ++i) {
-    for (int j = b; j < d; ++j) {
+  for (int i = a; i <= c; ++i) {
+    for (int j = b; j <= d; ++j) {
       min = std::min(min, matrix[i][j]);
       max = std::max(max, matrix[i][j]);
     }
@@ -34,8 +35,8 @@ int main() {
 
   int val = max - min;
   int swap_count = 0;
-  for (int i = a; i < c; ++i) {
-    for (int j = b; j < d; ++j) {
+  for (int i = a; i <= c; ++i) {
+    for (int j = b; j <= d; ++j) {
       if (matrix[i][j] < val) {
         matrix[i][j] = max;
         ++swap_count;
@@ -45,13 +46,13 @@ int main() {
   }
 
   int diagonal_swap_count = 0;
-  for (int i = 0; i < x; ++i) {
+  for (int i = 1; i <= x; ++i) {
     if (status[i][i] >= 1) {
       ++diagonal_swap_count;
     }
   }
-  for (int i = 0; i < x; ++i) {
-    if (status[i][x - i] >= 1) {
+  for (int i = 1; i <= x; ++i) {
+    if (status[i][x + 1 - i] >= 1) {
       ++diagonal_swap_count;
     }
   }
